@@ -1,0 +1,177 @@
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css");
+* {
+    border: 0;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-size: 15px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+
+/*Navigation css section starts here*/
+
+.container {
+    display: flex;
+}
+
+#nav {
+    display: flex;
+    height: 100vh;
+    width: 190px;
+    font-size: 15px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    overflow: hidden;
+    background: white;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+ul {
+    margin-top: 40px;
+}
+
+li {
+    list-style: none;
+    margin-bottom: 10px;
+    margin-top: 1px;
+    border-radius: 6px;
+    padding-bottom: 10px;
+    padding-left: 30px;
+    display: flex;
+}
+
+li:hover {
+    color: white;
+    background-color: green;
+    padding-top: 5px;
+}
+
+i {
+    color: green;
+    padding: 2px 15px 2px 0;
+}
+
+i:hover {
+    color: white;
+}
+
+a {
+    color: green;
+    align-items: center;
+}
+
+a:hover {
+    color: white;
+}
+
+#logout {
+    height: 25px;
+    width: 100px;
+    color: white;
+    margin-top: 70px;
+    margin-left: 35%;
+    border-radius: 10px;
+    background-color: green;
+}
+
+
+/*................Navigation css section ends here..........................*/
+
+
+/*.................Form css section starts here........................*/
+
+.form {
+    margin-left: 10%;
+    padding-left: 10%;
+    background: azure;
+    width: 100%;
+}
+
+p {
+    margin-top: 10px;
+    margin-bottom: 20px;
+    font-style: italic;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Sans Unicode', sans-serif;
+}
+
+h3 {
+    margin: 40px 0 0 0;
+    letter-spacing: 1px;
+}
+
+h4 {
+    margin-bottom: 20px;
+}
+
+.guest {
+    margin-bottom: 30px;
+    display: flex;
+}
+
+.info input {
+    height: 20px;
+    width: 90%;
+    margin-bottom: 15px;
+    padding: 15px;
+    position: relative;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.hotel {
+    margin-bottom: 20px;
+    display: flex;
+}
+
+.hotel input[type="number"] {
+    height: 20px;
+    width: 100%;
+    margin-bottom: 15px;
+    padding: 15px;
+    position: relative;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+#button {
+    width: 10%;
+    margin: 40px 0;
+    height: 30px;
+    color: white;
+    cursor: pointer;
+    border-radius: 7px;
+    background-color: green;
+}
+
+select {
+    height: 30px;
+    width: 100%;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+textarea {
+    height: 100px;
+    width: 55%;
+    padding: 15px;
+    margin-left: 130px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+span {
+    color: red;
+    margin: 0;
+    font-size: 14px;
+    font-style: italic;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Sans Unicode', sans-serif;
+}
+
+::placeholder {
+    padding-left: 40px;
+    padding-top: 20px;
+    font-style: italic;
+}
+
+
+/*.................Form css section ends here........................*/
