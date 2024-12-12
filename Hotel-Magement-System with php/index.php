@@ -51,7 +51,7 @@
                             $login = new Login_User($email, $pass);
                             $login -> loginpuser();
 
-                            if($email !== "hastings@gmail.com"){
+                            if($email !== "hastings@gmail.com" || $email !== "ibrahimcassim031@gmail.com"){
                                 header("location: menu/dashboarduser.php");
                             }else{
                                 
