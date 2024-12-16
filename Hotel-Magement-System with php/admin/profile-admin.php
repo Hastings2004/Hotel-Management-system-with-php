@@ -52,7 +52,7 @@ session_start();
                 <div class="profile">
                     <img src="../menu/usericon.png " id="img">
                     <div style=" padding-left: 10px;padding-top: 20px; ">
-                        <h3 style="font-size: 30px;">Welcome </h3>
+                        <h3 style="font-size: 30px;">Welcome Admin</h3>
                         <p>
                             <?php
                             echo $_SESSION['first_name']." " . $_SESSION['last_name'];
