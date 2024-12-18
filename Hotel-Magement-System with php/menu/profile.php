@@ -8,7 +8,7 @@ session_start();
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Profile</title>
-    <link rel="stylesheet" href="dashboard.css">
+    <link rel="stylesheet" href="../menu/dashboard.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css">
 </head>
 
@@ -67,16 +67,22 @@ session_start();
                     </p>
                 </div>
             </div>
-            <div class="option">
-                <select name="" id="option" style="margin-left: 35%; width: 250px; height: 40px; font-size: 30px; color: green; ">
-                    <option value="">------choose-------</option>
-                    <option value="security">Security</option>
-                    <option value="general">General</option>
-                    <option value="details">Details</option>
-                </select>
+            <div class="option" 
+            style=" display: flex; margin-left: 15%; background-color: white; margin-right: 25%; border-radius: 5px; padding: 15px;">
+                
+            <div style="margin-right:25%;">
+                <button id="general_btn" class="btn">General</button>
             </div>
-            <div id="details">
-                <div style="margin-left: 20%; font-size: 25px;">
+            <div style="margin-right:25%;">
+                <button class="btn" id="detail_btn">Details</button>
+            </div>
+            <div style="margin-right:25%;">
+                <button class="btn" id="security_btn">Security</button>
+            </div>
+                
+            </div>
+            <div id="details" style="display: none;">
+                <div style=" font-size: 25px;">
                     <?php
                         include '../classes/dbh.class.php';
                         include '../classes/guest-info.class.php';
@@ -87,7 +93,7 @@ session_start();
                 </div>
 
             </div>
-            <form action="../classes/profile.class.php" method="post" id="general">
+            <form action="../classes/profile.class.php" method="post" id="general" style="display: none;">
                 <div>
                     <div class="personal-info ">
                         <h3>Personal Information</h3>
@@ -136,7 +142,7 @@ session_start();
 
             </form>
 
-            <form action="../classes/change_password.class.php" method="post"  id="security">
+            <form action="../classes/change_password.class.php" method="post"  id="security" style="display: none;">
                 <div class="password ">
                     <h3>Security</h3>
 
@@ -164,30 +170,26 @@ session_start();
 
     </div>
     <script>
-        let select = document.getElementById("option");
+        
         let security = document.getElementById("security");
         let general = document.getElementById("general");
-        let details = document.getElementById("details")
+        let details = document.getElementById("details");
+        let security_btn = document.getElementById("security_btn");
+        let detail_btn = document.getElementById("detail_btn");
+        let general_btn = document.getElementById("general_btn");
 
-        select.addEventListener("change",()=>{
-            if(select.value === "security"){
-                security.style.display = "block";
-            }else{
-                security.style.display = "none";
-            }
-            if(select.value === "general"){
-                general.style.display = "block";
-            }else{
-                general.style.display = "none";
-            }
-            if(select.value === "details"){
-                details.style.display = "block";
-            }else{
-                details.style.display = "none";
-            }
-            
-            
+        general_btn.addEventListener('click', (e)=>{
+            general.style.display = "block";
         });
+
+        security_btn.addEventListener('click', (e)=>{
+            security.style.display = "block";
+        });
+
+        detail_btn.addEventListener("click", (e)=>{
+            details.style.display = "block";
+        });
+       
     </script>
 </body>
 
